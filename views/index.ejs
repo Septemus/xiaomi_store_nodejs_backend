@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高仿小米商城</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js.map"> </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="/style/index.css">
+
+</head>
+
+<body>
+  <nav class="mobile_side_panel navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)"><img src="/images/logo-mi2.png" alt=""
+          class="w-25  d-block"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">手机APP
+            </a>
+            <!-- <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link</a></li>
+                <li><a class="dropdown-item" href="#">Another link</a></li>
+                <li><a class="dropdown-item" href="#">A third link</a></li>
+              </ul>   -->
+            <div class="qrCode dropdown-menu">
+              <img src="/images/78c30d4f259ed43ab20e810a522a6249.png">
+              扫码领取新人百元礼包
+            </div>
+
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">个人中心</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">售后服务</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">人工客服</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">购物车</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">登录/注册</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" class="bc2top">回到顶部</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mytopbar  row">
+    <ul class="mytopbar_ls col-sm-7">
+      <li><a href="#">小米商城</a></li>
+      <li><a href="#">MIUI</a></li>
+      <li><a href="#">loT</a></li>
+      <li><a href="#">云服务</a></li>
+      <li><a href="#">天星数科</a></li>
+      <li><a href="#">有品</a></li>
+      <li><a href="#">小爱开放平台</a></li>
+      <li><a href="#">企业团购</a></li>
+      <li><a href="#">资质证照</a></li>
+      <li><a href="#">协议规则</a></li>
+      <li class="download">
+        <a href="#">下载app</a>
+        <div class="download_qr">
+          <a href="#">
+            <img src="/images/download.png">
+            <p>小米商城APP</p>
+          </a>
+
+
+        </div>
+        <div class="download_qr_traingle">
+          <!-- sas -->
+        </div>
+      </li>
+    </ul>
+    <div class="mycart col-sm-2">
+      <div class="cart_box">
+        <i class="fa fa-shopping-cart"></i>
+        购物车
+
+
+      </div>
+      <div class="cart_content">
+        这是购物车的内容
+      </div>
+    </div>
+    <!-- <div class="myuserinfo col-sm-3"> -->
+    <ul class="topbar_ls_r col-sm-3">
+      <li><a href="#">登录</a></li>
+      <li><a href="#">注册</a></li>
+      <li><a href="#">消息通知</a></li>
+    </ul>
+
+    <!-- </div> -->
+  </div>
+  <div class="row mynavbar container-xl">
+    <div class="col-md-2 p-3  text-white">
+      <div class="logo_div">
+        <img src="/images/logo-mi2.png" alt="" class="img-fluid mx-auto d-block">
+      </div>
+    </div>
+    <div class="col-md-8 p-3  ">
+      <div class="nav_items">
+        <a href="#" class="nav_xiaomi_a">
+
+          小米手机
+
+        </a>
+
+        <a href="#" class="nav_red_a">
+
+          redmi手机
+
+        </a>
+
+        <a href="#">
+
+          电视
+
+        </a>
+
+        <a href="#">
+
+          笔记本
+
+        </a>
+
+        <a href="#">
+
+          平板
+
+        </a>
+
+        <a href="#">
+
+          家电
+
+        </a>
+
+        <a href="#">
+
+          路由器
+
+        </a>
+        <div class="nav_menu nav_menu_phone">
+          <% for(let i=0;i<nav_phone_list.length;++i) {%>
+            <div class="card h-100">
+              <img class="card-img-top w-75 h-75  w-50 h-50 d-block mx-auto" src="<%= nav_phone_list[i].path %>">
+              <div class="card-body">
+                <p>
+                  <%= nav_phone_list[i].name %>
+                </p>
+                <p>
+                  <%= nav_phone_list[i].price %>
+                </p>
+
+              </div>
+            </div>
+            <% } %>
+             
+        </div>
+
+        
+
+        <div class="nav_menu nav_menu_red">
+          <% for(let i=0;i<nav_red_list.length;++i) {%>
+            <div class="card h-100">
+              <img class="card-img-top w-75 h-75  w-50 h-50 d-block mx-auto" src="<%= nav_red_list[i].path %>">
+              <div class="card-body">
+                <p>
+                  <%= nav_red_list[i].name %>
+                </p>
+                <p>
+                  <%= nav_red_list[i].price %>
+                </p>
+
+              </div>
+            </div>
+            <% } %>
+              
+        </div>
+
+
+      </div>
+    </div>
+    <div class="col-md-2 p-3  text-white">
+
+      <div class="search_box">
+        <input type="text" placeholder="手机" list="search_options"><button><i class="fa fa-search"></i></button>
+        <datalist id="search_options">
+          <option>手机</option>
+
+          <option>笔记本</option>
+
+          <option>洗衣机</option>
+
+          <option>台灯</option>
+
+          <option>路由器</option>
+
+          <option>插座</option>
+
+          <option>灯</option>
+
+          <option>扫地机器人</option>
+        </datalist>
+
+      </div>
+    </div>
+  </div>
+  <div class="disp container-xl px-0">
+    <div class="left">
+      <ul>
+        <li>手机
+          <div class="slide_menu">
+            <ul>
+              <% for(let item of left_phone_list) {%>
+                <li>
+                  <a href="javascript:;">
+                    <img src="<%= item.path %>">
+                    <span>
+                      <%= item.name %>
+                    </span>
+                  </a>
+                </li>
+                <% } %>
+
+
+            </ul>
+
+
+
+          </div>
+          <i class="fa fa-angle-right"></i>
+        </li>
+        <li>电视
+          <div class="slide_menu">
+
+          </div>
+          <i class="fa fa-angle-right"></i>
+        </li>
+        <li>家电
+          <div class="slide_menu">
+
+          </div>
+          <i class="fa fa-angle-right"></i>
+        </li>
+        <li>笔记本 平板
+          <div class="slide_menu">
+
+          </div>
+          <i class="fa fa-angle-right"></i>
+        </li>
+        <li>出行 穿戴
+          <div class="slide_menu">
+
+          </div>
+          <i class="fa fa-angle-right"></i>
+        </li>
+        <li>耳机 音箱
+          <div class="slide_menu">
+
+          </div>
+          <i class="fa fa-angle-right"></i>
+        </li>
+        <li>健康 儿童
+          <div class="slide_menu">
+
+          </div>
+          <i class="fa fa-angle-right"></i>
+        </li>
+      </ul>
+
+    </div>
+    <div class="right">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <% for(let i=0;i<swiper_list.length;++i){ %>
+            <div class="swiper-slide slide_<%= i+1 %>"><a href="javascript:;">
+                <img src="<%= swiper_list[i].path %>">
+              </a></div>
+            <% } %>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <div class="advertisement container-lg p-0 ">
+    <div class="rowbox row m-0">
+      <div class="leftbox col-md-4 p-0">
+        <div class="ad_left">
+
+          <a class="with_right_line" href=""><i class="fa fa-clock-o"></i>
+
+            <br>保障服务</a>
+          <a class="with_right_line" href=""><i class="fa fa-building-o"></i>
+
+            <br>企业团购</a>
+          <a href=""><i class="fa fa-facebook-official"></i>
+
+            <br>F码通道</a>
+          <a class="with_hat with_right_line" href=""><i class="fa fa-id-card-o"></i>
+
+            <br>米粉卡</a>
+          <a class="with_hat with_right_line" href=""><i class="fa fa-usd"></i>
+
+            <br>以旧换新</a>
+          <a class="with_hat" href=""><i class="fa fa-mobile"></i>
+
+            <br>话费充值</a>
+
+        </div>
+      </div>
+      <div class="rightbox col-md-8 p-0">
+        <div class="ad_right">
+          <div class="ad_card"><img src="/images/0ab8e5096ac6f08bd632e4d5a15d1792.jpg"></div>
+          <div class="ad_card"><img src="/images/c5f019908e21571fe48fdad0ebf79249.jpg"></div>
+          <div class="ad_card"><img src="/images/28c13d0d11b38ec17fa5d83bc6ba5912.jpg"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="clear_fix">
+
+  </div>
+  <div class="product_area">
+    <div class="container-xl">
+      <div class="home-banner-box">
+        <a href="javascript:;"><img src="/images/0e2b43800d3e1ef40470ac04b3e0140b.webp"></a>
+      </div>
+
+
+      <div class="panel">
+        <p>手机</p>
+        <a href="">查看更多 <i class="fa fa-angle-right"></i></a>
+        <div class="grid_container c_selected">
+          <%- include('container_content.ejs',{_list:products_list.phone}) %>
+        </div>
+      </div>
+      <div class="panel">
+        <p>智能穿戴</p>
+        <a href="javascript:void(0);" id="wearing_a">穿戴</a>
+        &nbsp;
+        <a href="javascript:void(0);" id="earphone_a" class="a_selected">耳机</a>
+        <div class="grid_container earphone_container c_selected">
+          <%- include('container_content.ejs',{_list:products_list.earphone}) %>
+        </div>
+        <div class="grid_container wearing_container">
+          <%- include('container_content.ejs',{_list:products_list.wearing}) %>
+        </div>
+      </div>
+      <div class="panel">
+        <p>笔记本&nbsp;|&nbsp;平板</p>
+        <a href="" class="a_selected">热门</a>
+        <div class="grid_container c_selected">
+          <%- include('container_content.ejs',{_list:products_list.laptop}) %>
+          
+        </div>
+
+
+      </div>
+      <div class="panel">
+        <p>家电</p>
+        <a href="javascript:;" id="tv_a">电视影音</a>
+        <a href="javascript:;" id="onsale_a" class="a_selected">热门</a>
+        <div class="grid_container onsale_container c_selected">
+          <%- include('container_content.ejs',{_list:products_list.household}) %>
+        </div>
+        <div class="grid_container tv_container">
+          <%- include('container_content.ejs',{_list:products_list.tv}) %>
+        </div>
+      </div>
+      <div class="home-banner-box">
+        <a href="javascript:;"><img src="/images/88e35cffc82cd98cd53172460067af17.webp"></a>
+      </div>
+      <div class="panel">
+        <p>视频</p>
+        <a href="javascript:;">查看更多 <i class="fa fa-angle-right"></i></a>
+        <div class="video_container">
+
+          <a href="javascript:;" class="video_img">
+            <img src="/images/e74c4ff741bcdfc5b28a48a43e4edc6d.webp">
+            <i class="fa fa-play"></i>
+
+            <p class="title">2021年春季新品发布会第一场</p>
+            <p class="desc"></p>
+          </a>
+
+
+          <a href="javascript:;" class="video_img">
+            <img src="/images/101b19aca4bb489bcef0f503e44ec866.webp">
+            <i class="fa fa-play"></i>
+
+            <p class="title">Redmi 10X系列发布会</p>
+            <p class="desc">Redmi 10X系列发布会</p>
+          </a>
+
+
+          <a href="javascript:;" class="video_img">
+            <img src="/images/96563e75833ba4563bd469dd28203b09.webp">
+            <i class="fa fa-play"></i>
+
+            <p class="title">小米10 青春版 发布会</p>
+            <p class="desc"></p>
+          </a>
+
+
+          <a href="javascript:;" class="video_img">
+            <img src="/images/2fd26bb99b723337a2f8eaba84f7d5bb.webp">
+            <i class="fa fa-play"></i>
+            <p class="title">小米10 8K手机拍大片</p>
+            <p class="desc"></p>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="bottom_area container-xl">
+    <div class="service">
+      <div class="service_box"><i class="fa fa-wrench"></i> 预约维修服务</div>
+      <div class="service_box"><i class="fa fa-undo"></i> 7天无理由退货</div>
+      <div class="service_box"><i class="fa fa-refresh"></i> 15天免费换货</div>
+      <div class="service_box"><i class="fa fa-gift"></i> 满69包邮</div>
+      <div class="service_box"><i class="fa fa-map-marker"></i> 1100余家售后网点</div>
+    </div>
+    <div class="links">
+      <dl>
+        <dt>帮助中心</dt>
+        <dd><a href="javascript:;">账户管理</a></dd>
+        <dd><a href="javascript:;">购物指南</a></dd>
+        <dd><a href="javascript:;">订单操作</a></dd>
+      </dl>
+      <dl>
+        <dt>服务支持</dt>
+        <dd><a href="javascript:;">售后政策</a></dd>
+        <dd><a href="javascript:;">自助服务</a></dd>
+        <dd><a href="javascript:;">相关下载</a></dd>
+      </dl>
+      <dl>
+        <dt>线下门店</dt>
+        <dd><a href="javascript:;">小米之家</a></dd>
+        <dd><a href="javascript:;">服务网点</a></dd>
+        <dd><a href="javascript:;">授权体验店/专区</a></dd>
+      </dl>
+      <dl>
+        <dt>关于小米</dt>
+        <dd><a href="javascript:;">了解小米</a></dd>
+        <dd><a href="javascript:;">加入小米</a></dd>
+        <dd><a href="javascript:;">投资者关系</a></dd>
+        <dd><a href="javascript:;">企业社会责任</a></dd>
+        <dd><a href="javascript:;">廉洁举报</a></dd>
+      </dl>
+      <dl>
+        <dt>关注我们</dt>
+        <dd><a href="javascript:;">新浪微博</a></dd>
+        <dd><a href="javascript:;">官方微信</a></dd>
+        <dd><a href="javascript:;">联系我们</a></dd>
+        <dd><a href="javascript:;">公益基金会</a></dd>
+      </dl>
+      <dl>
+        <dt>特色服务</dt>
+        <dd><a href="javascript:;">F码通道</a></dd>
+        <dd><a href="javascript:;">礼物码</a></dd>
+        <dd><a href="javascript:;">防伪查询</a></dd>
+      </dl>
+      <div class="contact">
+        <p class="telephone">400-100-5678</p>
+        <p>8:00-18:00（仅收市话费）</p>
+        <a href=""><i class="fa fa-commenting"></i>人工客服</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="post_area">
+    <div class="container-xl">
+      <div class="xiaomi_logo">
+        <img src="/images/logo-mi2.png" alt="" class="xiaomi_logo">
+      </div>
+
+      <div class="post_right">
+        <p class="sites">小米商城 | MIUI | 米家 | 米聊 | 多看 | 游戏 | 政企服务 | 小米天猫店 | 小米集团隐私政策 | 小米公司儿童信息保护规则 | 小米商城隐私政策 | 小米商城用户协议
+          |
+          问题反馈 | Select Location</p>
+        <p class="sites">北京互联网法院法律服务工作站 | 中国消费者协会 | 北京市消费者协会</p>
+        <p>
+        <p> © mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2020]0276-042号</p>
+        <p>（京）网械平台备字（2018）第00005号 互联网药品信息服务资格证 (京)-非经营性-2014-0090 营业执照 医疗器械质量公告</p>
+        <p>增值电信业务许可证 网络食品经营备案 京食药网食备202010048 食品经营许可证</p>
+        <p>违法和不良信息举报电话：171-5104-4404 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+        </p>
+        <a href="javascript:;"><img src="/images/truste.png"></a>
+        <a href="javascript:;"><img src="/images/v-logo-2.png"></a>
+        <a href="javascript:;"><img src="/images/icon3.png"></a>
+        <a href="javascript:;"><img src="/images/ba10428a4f9495ac310fd0b5e0cf8370.png"></a>
+        <a href="javascript:;"><img src="/images/8db929caaf8cab755ae29640a8214dc6.png"></a>
+      </div>
+      <div class="slogan">
+        探索黑科技，小米为发烧而生
+      </div>
+    </div>
+
+  </div>
+  <div class="side_panel">
+
+    <a href="javascript:void(0);" class="download_qr1">
+      <img class="static" src="/images/98a23aae70f25798192693f21c4d4039.png">
+      <img class="Bhover" src="/images/74c4fcb4475af8308e9a670db9c01fdf.png">
+      手机APP
+      <div class="qrCode">
+        <img src="/images/78c30d4f259ed43ab20e810a522a6249.png">
+        <span>扫码领取新人百元礼包</span>
+        <div class="qrTriangle"></div>
+      </div>
+
+    </a>
+    <a href="javascript:void(0);">
+      <img class="static" src="/images/55cad219421bee03a801775e7309b920.png">
+      <img class="Bhover" src="/images/41f858550f42eb1770b97faf219ae215.png">
+      个人中心
+    </a>
+    <a href="javascript:void(0);">
+      <img class="static" src="/images/12eb0965ab33dc8e05870911b90f3f13.png">
+      <img class="Bhover" src="/images/95fbf0081a06eec7be4d35e277faeca0.png">
+      售后服务
+    </a>
+    <a href="javascript:void(0);">
+      <img class="static" src="/images/4f036ae4d45002b2a6fb6756cedebf02.png">
+      <img class="Bhover" src="/images/5e9f2b1b0da09ac3b3961378284ef2d4.png">
+      人工客服
+    </a>
+    <a href="javascript:void(0);">
+      <img class="static" src="/images/d7db56d1d850113f016c95e289e36efa.png">
+      <img class="Bhover" src="/images/692a6c3b0a93a24f74a29c0f9d68ec71.png">
+      购物车
+    </a>
+    <a href="javascript:void(0);" class="bc2top">
+      <img class="static" src="/images/totop.png">
+      <img class="Bhover" src="/images/totop_hover.png">
+      回到顶部
+    </a>
+  </div>
+
+
+</body>
+<script src="./js/script.js" type="module"></script>
+
+</html>

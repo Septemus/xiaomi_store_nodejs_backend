@@ -1,0 +1,32 @@
+[
+    {
+        "path": "/images/redmi10A.webp",
+        "name": " Redmi 10A",
+        "price": "649元起"
+    },
+    {
+        "path": "/images/redmik50pro.webp",
+        "name": " Redmi K50 Pro",
+        "price": "2999元起"
+    },
+    {
+        "path": "/images/redmik50.webp",
+        "name": " Redmi K50",
+        "price": "2399元起"
+    },
+    {
+        "path": "/images/redmik40S.webp",
+        "name": " Redmi K40S",
+        "price": "1799元起"
+    },
+    {
+        "path": "/images/redmiK50电竞.webp",
+        "name": " Redmi K50 电竞版",
+        "price": "3299元起"
+    },
+    {
+        "path":"images/redmi note11Pro.webp",
+        "name": " Redmi Note 11 Pro",
+        "price": "1799元起"
+    }
+]

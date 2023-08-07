@@ -1,0 +1,55 @@
+<% for(let item of _list){ %>
+  <% if(item.type===0) { %>
+    <a class="gitem left_banner" href="">
+      <img src="<%= item.path %>">
+    </a>
+    <% } %>
+      <% if(item.type===1) { %>
+        <a class="gitem" href="">
+          <div class="gitem_card">
+            <img src="<%= item.path %>">
+            <h6>
+              <%= item.name %>
+            </h6>
+            <p>
+              <%= item.discription %>
+            </p>
+            <div class="price">
+              <span>
+                <%= item.price %>
+              </span>&nbsp;<del>
+                <%= item.ori_price %>
+              </del>
+            </div>
+          </div>
+        </a>
+
+        <% } %>
+          <% if(item.type===2) { %>
+            <div class="last_icon">
+              <% for(let j of item.halfs) {%>
+                <div class="last_icon_half">
+                  <% if(j.path){ %>
+                    <img src="<%= j.path %>">
+                    <% } %>
+                      <p>
+                        <%- j.p1 %>
+                      </p>
+                      <% if(j.p2) { %>
+                        <p>
+                          <%- j.p2 %>
+                        </p>
+                        <% } %>
+                          <% if(j.i_class) { %>
+                            <i class="fa <%= j.i_class %>"></i>
+                            <% } %>
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+              <% if(item.type===3) {%>
+                <a class="gitem left_banner half_left_banner" href="">
+                  <img src="<%= item.path %>">
+                </a>
+                <% } %>
+                  <% } %>

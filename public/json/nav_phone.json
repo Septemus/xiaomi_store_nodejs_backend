@@ -1,0 +1,56 @@
+[
+
+
+    {
+
+        "path": "/images/nav1.webp",
+        "name": "XiaoMi 12 Pro",
+        "price": "4699元起"
+
+    },
+    {
+        "path": "/images/nav2.webp",
+        "name": "XiaoMi 12",
+        "price": "3699元起"
+
+    },
+    {
+        "path": "/images/nav3.webp",
+        "name": "XiaoMi 12X",
+        "price": "2999元起"
+
+    },
+
+
+
+
+    {
+        "path": "/images/nav4.webp",
+        "name": "XiaoMi 11 青春活力版",
+        "price": "1899元起"
+
+    },
+
+
+
+
+    {
+        "path": "/images/nav5.webp",
+        "name": "XiaoMi Civi",
+        "price": "2299元起"
+
+    },
+
+
+
+
+    {
+        "path": "/images/nav6.webp",
+        "name": "XiaoMi MIX 4",
+        "price": "4199元起"
+
+    }
+
+
+
+]
