@@ -7,7 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('xiaomi-store-backend:server');
 var http = require('http');
-import cors from 'cors'
+const cors = require( 'cors' )
 /**
  * Get port from environment and store in Express.
  */
